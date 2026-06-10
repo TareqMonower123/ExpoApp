@@ -1,0 +1,68 @@
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css";
+
+@import "nativewind/theme";
+
+@layer theme {
+  @theme {
+    --color-bg: #f8fafc;
+    --color-card: #ffffff;
+    --color-text: #0f172a;
+    --color-text-secondary: #64748b;
+    --color-text-muted: #94a3b8;
+    --color-accent: #3b82f6;
+    --color-border: #e2e8f0;
+    --color-input: #ffffff;
+    --color-chip: #f1f5f9;
+    --color-chip-active: #3b82f6;
+    --color-chip-text: #64748b;
+    --color-chip-active-text: #ffffff;
+    --color-checkbox: #cbd5e1;
+    --color-checkbox-active: #3b82f6;
+    --color-completed: #94a3b8;
+    --color-delete-icon: #94a3b8;
+    --color-danger: #ef4444;
+
+    --font-inter: "Inter_400Regular", system-ui, sans-serif;
+    --font-inter-bold: "Inter_700Bold", sans-serif;
+  }
+}
+
+.dark {
+  --color-bg: #0f172a;
+  --color-card: #1e293b;
+  --color-text: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+  --color-accent: #3b82f6;
+  --color-border: #334155;
+  --color-input: #1e293b;
+  --color-chip: #1e293b;
+  --color-chip-active: #3b82f6;
+  --color-chip-text: #94a3b8;
+  --color-chip-active-text: #ffffff;
+  --color-checkbox: #475569;
+  --color-checkbox-active: #3b82f6;
+  --color-completed: #64748b;
+  --color-delete-icon: #64748b;
+  --color-danger: #ef4444;
+}
+
+@media android {
+  :root {
+    --font-mono: monospace;
+    --font-rounded: normal;
+    --font-serif: serif;
+    --font-sans: normal;
+  }
+}
+
+@media ios {
+  :root {
+    --font-mono: ui-monospace;
+    --font-serif: ui-serif;
+    --font-sans: system-ui;
+    --font-rounded: ui-rounded;
+  }
+}
