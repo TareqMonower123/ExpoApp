@@ -1,7 +1,7 @@
 import { useFonts } from "expo-font"
 
-export const FONT_PRIMARY = "ChaleLondon"
-export const FONT_SECONDARY = "ChaletNewYork"
+const FONT_PRIMARY = "ChaleLondon"
+const FONT_SECONDARY = "ChaletNewYork"
 
 export function useAppFonts() {
   const [fontsLoaded, fontError] = useFonts({

@@ -4,6 +4,8 @@ import { StatusBar } from "expo-status-bar"
 import { View } from "@/tw"
 import { useAppFonts } from "@/fonts"
 import { Text } from "react-native"
+import { GestureHandlerRootView } from "react-native-gesture-handler"
+import { BottomSheetModalProvider } from "@gorhom/bottom-sheet"
 
 export default function RootLayout() {
   const { fontsLoaded, fontError } = useAppFonts()
@@ -25,9 +27,13 @@ export default function RootLayout() {
   }
 
   return (
-    <View className="flex-1 dark">
-      <StatusBar style="light" />
-      <Slot />
-    </View>
+    <GestureHandlerRootView className="flex-1">
+      <BottomSheetModalProvider>
+        <View className="flex-1 dark">
+          <StatusBar style="light" />
+          <Slot />
+        </View>
+      </BottomSheetModalProvider>
+    </GestureHandlerRootView>
   )
 }

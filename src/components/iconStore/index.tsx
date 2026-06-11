@@ -1,18 +1,24 @@
 import { JSX } from "react"
 import { HotboxLogo } from "./sub-components/hotbox-logo"
-import { IIconStore } from "./interface"
 import { View } from "@/tw"
 
-interface IIcon {
-  iconName: IIconStore['iconName']
+const icons = [
+  'hotbox-logo',
+] as const
+
+type IconName = (typeof icons)[number]
+
+interface IIconStore {
+  iconName: IconName
+  className?: string
   color?: string
 }
 
-/**
- * Renders a specific icon based on the given icon name.
- * @param {IIcon} props - The props containing the icon name.
- * @returns {JSX.Element} - The rendered icon.
- */
+interface IIcon {
+  iconName: IconName
+  color?: string
+}
+
 function Icon({ iconName, color }: IIcon): JSX.Element {
   switch (iconName) {
     case 'hotbox-logo': {
@@ -25,11 +31,6 @@ function Icon({ iconName, color }: IIcon): JSX.Element {
   }
 }
 
-/**
- * Renders an icon component with specified properties.
- * @param {IIconStore} props - The props for the icon component.
- * @returns {JSX.Element} - The rendered icon component.
- */
 export function IconStore({ iconName, className, color }: IIconStore): JSX.Element {
   return (
     <View className={className}>

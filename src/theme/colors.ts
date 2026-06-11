@@ -123,5 +123,3 @@ export const colors = {
   misc900: "#052b5b",
   misc950: "#021b3d",
 } as const
-
-export type ColorToken = keyof typeof colors
