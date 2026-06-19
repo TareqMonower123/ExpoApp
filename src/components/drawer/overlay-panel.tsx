@@ -1,10 +1,9 @@
 import { useEffect, useRef } from "react"
-import { useWindowDimensions } from "react-native"
+import { useWindowDimensions, View } from "react-native"
 import BottomSheet, {
   BottomSheetBackdrop,
   BottomSheetView,
 } from "@gorhom/bottom-sheet"
-import { View } from "@/tw"
 import { DrawerProps } from "./interface"
 
 interface BottomSheetDrawerProps extends Omit<DrawerProps, "position"> {
@@ -53,7 +52,7 @@ export function BottomSheetDrawer({
         backgroundStyle={[{ backgroundColor: "#0d1212" }, drawerStyle]}
         handleIndicatorStyle={{ backgroundColor: "#868f8e" }}
       >
-        <BottomSheetView className="flex-1">
+        <BottomSheetView style={{ flex: 1 }}>
           {renderDrawerContent()}
         </BottomSheetView>
       </BottomSheet>

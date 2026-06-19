@@ -1,4 +1,5 @@
-import { View, TouchableOpacity, SafeAreaView } from "@/tw"
+import { View, TouchableOpacity } from "react-native"
+import { SafeAreaView } from "react-native-safe-area-context"
 import { Settings } from "lucide-react-native"
 import { IconStore } from "@/components/iconStore"
 import { colors } from "@/theme/colors"
@@ -9,7 +10,7 @@ interface HeaderProps {
 
 export function Header({ onPressSettings }: HeaderProps) {
   return (
-    <SafeAreaView edges={["top"]} className="bg-bg">
+    <SafeAreaView edges={["top"]} style={{ backgroundColor: "#0d1212" }}>
       <View className="flex-row items-center justify-between px-5" style={{ paddingTop: 8, paddingBottom: 8, borderBottomWidth: 0.2, borderBottomColor: colors.gray700 }}>
         <IconStore iconName="hotbox-logo" color={colors.text} />
         <TouchableOpacity

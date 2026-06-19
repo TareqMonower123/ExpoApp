@@ -1,9 +1,9 @@
-import { useState } from "react"
+import { View } from "react-native"
 import { Drawer } from "@/components/drawer"
-import { View } from "@/tw"
 import { Header } from "@/layout/Header"
 import { Footer } from "@/layout/Footer"
 import { SettingsPanel } from "@/layout/Header/sub-components/settings-panel"
+import { useState } from "react"
 
 export default function TabLayout() {
   const [open, setOpen] = useState(false)

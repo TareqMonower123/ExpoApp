@@ -1,6 +1,6 @@
 import { useWindowDimensions } from "react-native"
+import { SafeAreaView } from "react-native-safe-area-context"
 import { Drawer as RNDrawer } from "react-native-drawer-layout"
-import { SafeAreaView } from "@/tw"
 import { DrawerProps } from "./interface"
 
 interface SideDrawerProps extends Omit<DrawerProps, "position"> {
@@ -34,7 +34,7 @@ export function SideDrawer({
       renderDrawerContent={() => (
         <SafeAreaView
           edges={position === "right" ? ["top", "right", "bottom"] : ["top", "left", "bottom"]}
-          className="flex-1 bg-bg"
+          style={{ flex: 1, backgroundColor: "#0d1212" }}
         >
           {renderDrawerContent()}
         </SafeAreaView>

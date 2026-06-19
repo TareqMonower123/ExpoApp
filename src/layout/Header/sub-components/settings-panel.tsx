@@ -1,6 +1,6 @@
 import { TouchableOpacity } from "react-native"
 import { X } from "lucide-react-native"
-import { View, Text } from "@/tw"
+import { View, Text } from "react-native"
 import { colors } from "@/theme/colors"
 import { ComingSoon } from "@/components/coming-soon"
 import { Settings } from "lucide-react-native"

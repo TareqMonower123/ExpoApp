@@ -1,11 +1,11 @@
 import "../../global.css"
-import { Slot } from "expo-router"
+import { Stack } from "expo-router"
 import { StatusBar } from "expo-status-bar"
-import { View } from "@/tw"
+import { View, Text } from "react-native"
 import { useAppFonts } from "@/fonts"
-import { Text } from "react-native"
 import { GestureHandlerRootView } from "react-native-gesture-handler"
 import { BottomSheetModalProvider } from "@gorhom/bottom-sheet"
+import { colors } from "@/theme/colors"
 
 export default function RootLayout() {
   const { fontsLoaded, fontError } = useAppFonts()
@@ -27,11 +27,20 @@ export default function RootLayout() {
   }
 
   return (
-    <GestureHandlerRootView className="flex-1">
+    <GestureHandlerRootView style={{ flex: 1 }}>
       <BottomSheetModalProvider>
         <View className="flex-1 dark">
           <StatusBar style="light" />
-          <Slot />
+          <Stack
+            screenOptions={{
+              headerStyle: { backgroundColor: colors.bg },
+              headerTintColor: colors.text,
+              headerTitleStyle: { color: colors.text },
+              headerShadowVisible: false,
+            }}
+          >
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          </Stack>
         </View>
       </BottomSheetModalProvider>
     </GestureHandlerRootView>

@@ -1,4 +1,4 @@
-import { View, Text } from "@/tw"
+import { View, Text } from "react-native"
 import { colors } from "@/theme/colors"
 import type { LucideIcon } from "lucide-react-native"
 

@@ -1,6 +1,6 @@
 import { JSX } from "react"
 import { HotboxLogo } from "./sub-components/hotbox-logo"
-import { View } from "@/tw"
+import { View } from "react-native"
 
 const icons = [
   'hotbox-logo',
