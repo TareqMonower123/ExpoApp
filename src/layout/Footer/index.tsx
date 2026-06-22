@@ -1,14 +1,14 @@
-import { Tabs } from "expo-router"
-import { useSafeAreaInsets } from "react-native-safe-area-context"
-import { Platform } from "react-native"
-import { Home, MapPin, Calendar, Zap, User } from "lucide-react-native"
-import { colors } from "@/theme/colors"
+import { Tabs } from "expo-router";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { Platform } from "react-native";
+import { Home, MapPin, Gift, Calendar1 } from "lucide-react-native";
+import { colors } from "@/theme/colors";
 
 export function Footer() {
-  const insets = useSafeAreaInsets()
+  const insets = useSafeAreaInsets();
 
-  const baseHeight = Platform.OS === "ios" ? 49 : 56
-  const tabBarHeight = baseHeight + 16 + insets.bottom
+  const baseHeight = Platform.OS === "ios" ? 49 : 56;
+  const tabBarHeight = baseHeight + 16 + insets.bottom;
 
   return (
     <Tabs
@@ -35,6 +35,15 @@ export function Footer() {
         }}
       />
       <Tabs.Screen
+        name="bookings"
+        options={{
+          tabBarLabel: "Bookings",
+          tabBarIcon: ({ color, size }) => (
+            <Calendar1 size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="locations"
         options={{
           tabBarLabel: "Locations",
@@ -42,26 +51,12 @@ export function Footer() {
         }}
       />
       <Tabs.Screen
-        name="bookings"
-        options={{
-          tabBarLabel: "Bookings",
-          tabBarIcon: ({ color, size }) => <Calendar size={size} color={color} />,
-        }}
-      />
-      <Tabs.Screen
         name="hot-perks"
         options={{
           tabBarLabel: "Hot Perks",
-          tabBarIcon: ({ color, size }) => <Zap size={size} color={color} />,
-        }}
-      />
-      <Tabs.Screen
-        name="profile"
-        options={{
-          tabBarLabel: "Profile",
-          tabBarIcon: ({ color, size }) => <User size={size} color={color} />,
+          tabBarIcon: ({ color, size }) => <Gift size={size} color={color} />,
         }}
       />
     </Tabs>
-  )
+  );
 }

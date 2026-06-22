@@ -1,12 +1,13 @@
-import { ComingSoon } from "@/components/coming-soon"
-import { Home } from "lucide-react-native"
+import { MarqueeOffer } from "@/components/marquee-offer";
+import { View } from "react-native";
 
 export default function HomeScreen() {
   return (
-    <ComingSoon
-      icon={Home}
-      title="Coming Soon"
-      subtitle="Home is under development"
-    />
-  )
+    <View className="flex-1 bg-bg">
+      <MarqueeOffer
+        text="Get 50% OFF memberships - Limited time offer!! Join Now"
+        speed={1}
+      />
+    </View>
+  );
 }

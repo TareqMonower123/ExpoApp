@@ -1,21 +1,21 @@
-import "../../global.css"
-import { Stack } from "expo-router"
-import { StatusBar } from "expo-status-bar"
-import { View, Text } from "react-native"
-import { useAppFonts } from "@/fonts"
-import { GestureHandlerRootView } from "react-native-gesture-handler"
-import { BottomSheetModalProvider } from "@gorhom/bottom-sheet"
-import { colors } from "@/theme/colors"
+import "../../global.css";
+import { Stack } from "expo-router";
+import { StatusBar } from "expo-status-bar";
+import { View, Text } from "react-native";
+import { useAppFonts } from "@/fonts";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
+import { colors } from "@/theme/colors";
 
 export default function RootLayout() {
-  const { fontsLoaded, fontError } = useAppFonts()
+  const { fontsLoaded, fontError } = useAppFonts();
 
   if (fontError) {
     return (
       <View className="flex-1 dark bg-bg items-center justify-center">
         <Text className="text-text">Failed to load fonts</Text>
       </View>
-    )
+    );
   }
 
   if (!fontsLoaded) {
@@ -23,7 +23,7 @@ export default function RootLayout() {
       <View className="flex-1 dark bg-bg items-center justify-center">
         <Text className="text-text">Loading...</Text>
       </View>
-    )
+    );
   }
 
   return (
@@ -44,5 +44,5 @@ export default function RootLayout() {
         </View>
       </BottomSheetModalProvider>
     </GestureHandlerRootView>
-  )
+  );
 }

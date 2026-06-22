@@ -1,10 +1,10 @@
-import { useWindowDimensions } from "react-native"
-import { SafeAreaView } from "react-native-safe-area-context"
-import { Drawer as RNDrawer } from "react-native-drawer-layout"
-import { DrawerProps } from "./interface"
+import { useWindowDimensions } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { Drawer as RNDrawer } from "react-native-drawer-layout";
+import { DrawerProps } from "./interface";
 
 interface SideDrawerProps extends Omit<DrawerProps, "position"> {
-  position: "left" | "right"
+  position: "left" | "right";
 }
 
 export function SideDrawer({
@@ -19,7 +19,7 @@ export function SideDrawer({
   overlayStyle,
   swipeEnabled = true,
 }: SideDrawerProps) {
-  const { width } = useWindowDimensions()
+  const { width } = useWindowDimensions();
 
   return (
     <RNDrawer
@@ -33,7 +33,11 @@ export function SideDrawer({
       swipeEnabled={swipeEnabled}
       renderDrawerContent={() => (
         <SafeAreaView
-          edges={position === "right" ? ["top", "right", "bottom"] : ["top", "left", "bottom"]}
+          edges={
+            position === "right"
+              ? ["top", "right", "bottom"]
+              : ["top", "left", "bottom"]
+          }
           style={{ flex: 1, backgroundColor: "#0d1212" }}
         >
           {renderDrawerContent()}
@@ -42,5 +46,5 @@ export function SideDrawer({
     >
       {children}
     </RNDrawer>
-  )
+  );
 }

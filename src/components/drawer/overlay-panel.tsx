@@ -1,13 +1,13 @@
-import { useEffect, useRef } from "react"
-import { useWindowDimensions, View } from "react-native"
+import { useEffect, useRef } from "react";
+import { useWindowDimensions, View } from "react-native";
 import BottomSheet, {
   BottomSheetBackdrop,
   BottomSheetView,
-} from "@gorhom/bottom-sheet"
-import { DrawerProps } from "./interface"
+} from "@gorhom/bottom-sheet";
+import { DrawerProps } from "./interface";
 
 interface BottomSheetDrawerProps extends Omit<DrawerProps, "position"> {
-  position: "bottom"
+  position: "bottom";
 }
 
 export function BottomSheetDrawer({
@@ -19,17 +19,17 @@ export function BottomSheetDrawer({
   drawerStyle,
   swipeEnabled = true,
 }: BottomSheetDrawerProps) {
-  const { height } = useWindowDimensions()
-  const bottomSheetRef = useRef<BottomSheet>(null)
-  const snapPoints = [`${size * 100}%`]
+  const { height } = useWindowDimensions();
+  const bottomSheetRef = useRef<BottomSheet>(null);
+  const snapPoints = [`${size * 100}%`];
 
   useEffect(() => {
     if (open) {
-      bottomSheetRef.current?.snapToIndex(0)
+      bottomSheetRef.current?.snapToIndex(0);
     } else {
-      bottomSheetRef.current?.close()
+      bottomSheetRef.current?.close();
     }
-  }, [open])
+  }, [open]);
 
   return (
     <View className="flex-1">
@@ -57,5 +57,5 @@ export function BottomSheetDrawer({
         </BottomSheetView>
       </BottomSheet>
     </View>
-  )
+  );
 }

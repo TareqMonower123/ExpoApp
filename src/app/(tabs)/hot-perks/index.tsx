@@ -1,5 +1,5 @@
-import { ComingSoon } from "@/components/coming-soon"
-import { Zap } from "lucide-react-native"
+import { ComingSoon } from "@/components/coming-soon";
+import { Zap } from "lucide-react-native";
 
 export default function HotPerksScreen() {
   return (
@@ -8,5 +8,5 @@ export default function HotPerksScreen() {
       title="Coming Soon"
       subtitle="Hot Perks is under development"
     />
-  )
+  );
 }

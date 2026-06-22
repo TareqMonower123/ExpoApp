@@ -14,7 +14,7 @@ export const colors = {
   accent: "#fac9b2",
   border: "rgba(255, 255, 255, 0.15)",
   input: "rgba(255, 255, 255, 0.08)",
-  tabActive: "#ffffff",
+  tabActive: "#fac9b2",
   tabInactive: "#868f8e",
 
   // ── Neutral ──
@@ -122,4 +122,4 @@ export const colors = {
   misc800: "#0b3c7a",
   misc900: "#052b5b",
   misc950: "#021b3d",
-} as const
+} as const;

@@ -1,18 +1,13 @@
-import Svg, { Path } from "react-native-svg"
-import { colors } from "@/theme/colors"
+import Svg, { Path } from "react-native-svg";
+import { colors } from "@/theme/colors";
 
 interface HotboxLogoProps {
-  color?: string
+  color?: string;
 }
 
 export function HotboxLogo({ color = colors.text }: HotboxLogoProps) {
   return (
-    <Svg
-      width={182}
-      height={16}
-      viewBox="0 0 182 16"
-      fill="none"
-    >
+    <Svg width={182} height={16} viewBox="0 0 182 16" fill="none">
       <Path
         d="M4.37151 14.3799V3.20313H0V0.71678H11.7451V3.20899H7.35023V14.3799H4.37151Z"
         fill={color}
@@ -49,7 +44,10 @@ export function HotboxLogo({ color = colors.text }: HotboxLogoProps) {
         d="M146.378 14.3799L151.288 7.19067L146.857 0.71678H150.475L153.295 5.03857H153.395L156.198 0.71678H159.598L155.144 7.19067L160.055 14.3799H156.438L153.161 9.31931H153.061L149.801 14.3799H146.378Z"
         fill={color}
       />
-      <Path d="M181.973 -0.519531H165.926V15.5597H181.973V-0.519531Z" fill={colors.accent} />
+      <Path
+        d="M181.973 -0.519531H165.926V15.5597H181.973V-0.519531Z"
+        fill={colors.accent}
+      />
     </Svg>
   );
 }

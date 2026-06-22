@@ -1,5 +1,5 @@
-import { ComingSoon } from "@/components/coming-soon"
-import { MapPin } from "lucide-react-native"
+import { ComingSoon } from "@/components/coming-soon";
+import { MapPin } from "lucide-react-native";
 
 export default function LocationsScreen() {
   return (
@@ -8,5 +8,5 @@ export default function LocationsScreen() {
       title="Coming Soon"
       subtitle="Locations is under development"
     />
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import { ComingSoon } from "@/components/coming-soon"
-import { Calendar } from "lucide-react-native"
+import { ComingSoon } from "@/components/coming-soon";
+import { Calendar } from "lucide-react-native";
 
 export default function BookingsScreen() {
   return (
@@ -8,5 +8,5 @@ export default function BookingsScreen() {
       title="Coming Soon"
       subtitle="Bookings is under development"
     />
-  )
+  );
 }
