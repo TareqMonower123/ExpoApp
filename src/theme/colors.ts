@@ -12,6 +12,7 @@ export const colors = {
   textSecondary: "rgba(255, 255, 255, 0.7)",
   textMuted: "rgba(255, 255, 255, 0.5)",
   accent: "#fac9b2",
+  accentDark: "#1c1b1b",
   border: "rgba(255, 255, 255, 0.15)",
   input: "rgba(255, 255, 255, 0.08)",
   tabActive: "#fac9b2",
