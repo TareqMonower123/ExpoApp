@@ -33,6 +33,11 @@
     --radius-medium: 1rem;
     --radius-large: 1.25rem;
     --radius-full: 624.9375rem;
+
+    /* Custom spacing — extend default scale */
+    --spacing-0\.75: 0.1875rem;
+    --spacing-17\.5: 4.375rem;
+    --spacing-85: 21.25rem;
   }
 }
 
@@ -167,5 +172,6 @@
 
 .container {
   padding-inline: 1rem;
-  padding-block: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 6.25rem;
 }
