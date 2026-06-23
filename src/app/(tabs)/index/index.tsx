@@ -98,50 +98,6 @@ export default function HomeScreen() {
             autoPlayInterval={5000}
           />
         </View>
-
-        <View className="mt-7">
-          <View className="flex-row items-center gap-2 mb-3">
-            <View className="w-0.75 h-4 bg-accent rounded-full" />
-            <Text className="text-muted text-sm">Offers & Promotions</Text>
-          </View>
-          <Carousel
-            data={LOCATIONS}
-            renderItem={({ item }) => (
-              <HomeLocationCard
-                imageUri={item.imageUri}
-                title={item.title}
-                address={item.address}
-                onPressPin={() => {}}
-                onPressBook={() => {}}
-              />
-            )}
-            autoPlay
-            loop
-            autoPlayInterval={5000}
-          />
-        </View>
-
-        <View className="mt-7">
-          <View className="flex-row items-center gap-2 mb-3">
-            <View className="w-0.75 h-4 bg-accent rounded-full" />
-            <Text className="text-muted text-sm">Offers & Promotions</Text>
-          </View>
-          <Carousel
-            data={LOCATIONS}
-            renderItem={({ item }) => (
-              <HomeLocationCard
-                imageUri={item.imageUri}
-                title={item.title}
-                address={item.address}
-                onPressPin={() => {}}
-                onPressBook={() => {}}
-              />
-            )}
-            autoPlay
-            loop
-            autoPlayInterval={5000}
-          />
-        </View>
       </View>
     </ScrollView>
   );
