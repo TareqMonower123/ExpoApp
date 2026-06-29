@@ -4,7 +4,6 @@ import type { CarouselRenderItem } from "react-native-reanimated-carousel";
 import type { ILayoutConfig as ParallaxConfig } from "react-native-reanimated-carousel/lib/typescript/layouts/parallax";
 import type { ILayoutConfig as StackConfig } from "react-native-reanimated-carousel/lib/typescript/layouts/stack";
 import type { SharedValue } from "react-native-reanimated";
-import { cn } from "@/lib/cn";
 
 const DEFAULT_ITEM_HEIGHT = 340;
 

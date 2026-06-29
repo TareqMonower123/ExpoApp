@@ -25,7 +25,7 @@ export function HomeLocationCard({
   className,
 }: HomeLocationCardProps) {
   return (
-    <Card className={cn("overflow-hidden h-85", className)}>
+    <Card className={cn("overflow-hidden", className)} style={{ height: 340 }}>
       <Image
         source={{ uri: imageUri }}
         className="absolute inset-0 w-full h-full"

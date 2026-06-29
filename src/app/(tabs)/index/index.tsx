@@ -32,7 +32,7 @@ export default function HomeScreen() {
     <ScrollView className="flex-1 bg-bg">
       <MarqueeOffer text="Get 50% OFF memberships - Limited time offer!! Join Now" speed={1} />
 
-      <View className="container">
+      <View className="container-padding">
         {/* intro cards */}
         <View className="flex-row w-full gap-5 h-50">
           <BookingCard
@@ -70,6 +70,7 @@ export default function HomeScreen() {
                 onPressBook={() => {}}
               />
             )}
+            itemHeight={340}
             autoPlay
             loop
             autoPlayInterval={5000}
@@ -93,6 +94,7 @@ export default function HomeScreen() {
                 onPressBook={() => {}}
               />
             )}
+            itemHeight={340}
             autoPlay
             loop
             autoPlayInterval={5000}

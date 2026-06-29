@@ -1,27 +1,16 @@
 import { Tabs } from "expo-router";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { Platform } from "react-native";
 import { Home, MapPin, Gift, Calendar1 } from "lucide-react-native";
 import { colors } from "@/theme/colors";
 
 export function Footer() {
-  const insets = useSafeAreaInsets();
-
-  const baseHeight = Platform.OS === "ios" ? 49 : 56;
-  const tabBarHeight = baseHeight + 16 + insets.bottom;
-
   return (
     <Tabs
-      safeAreaInsets={{ bottom: 0 }}
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
           backgroundColor: colors.bg,
-          paddingTop: 8,
-          paddingBottom: insets.bottom + 8,
           borderTopWidth: 0.2,
           borderTopColor: colors.gray700,
-          height: tabBarHeight,
         },
         tabBarActiveTintColor: colors.tabActive,
         tabBarInactiveTintColor: colors.tabInactive,

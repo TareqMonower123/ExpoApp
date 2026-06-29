@@ -19,9 +19,7 @@ export default function TabLayout() {
     >
       <View className="flex-1 bg-bg">
         <Header onPressSettings={() => setOpen(true)} />
-        <View className="flex-1">
-          <Footer />
-        </View>
+        <Footer />
       </View>
     </Drawer>
   );
