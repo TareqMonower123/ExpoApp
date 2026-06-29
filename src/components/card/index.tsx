@@ -5,6 +5,7 @@ import { cn } from "@/lib/cn";
 interface CardProps {
   variant?: "default" | "promo";
   padding?: "normal" | "none";
+  bordered?: boolean;
   className?: string;
   style?: ViewStyle;
   children: ReactNode;
@@ -12,6 +13,7 @@ interface CardProps {
 
 export function Card({
   variant = "default",
+  bordered = true,
   className,
   style,
   children,
@@ -23,7 +25,7 @@ export function Card({
         variant === "promo" && "bg-accent",
         className,
       )}
-      style={style}
+      style={[!bordered && { borderWidth: 0 }, style]}
     >
       {children}
     </View>

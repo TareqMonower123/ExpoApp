@@ -26,6 +26,7 @@ interface CarouselProps<T> {
   onScrollStart?: () => void;
   onScrollEnd?: (index: number) => void;
   className?: string;
+  style?: ViewStyle;
 }
 
 export function Carousel<T>({
@@ -47,6 +48,7 @@ export function Carousel<T>({
   onScrollStart,
   onScrollEnd,
   className,
+  style,
 }: CarouselProps<T>) {
   const { width: screenWidth } = useWindowDimensions();
   const cardWidth = itemWidth ?? screenWidth - 32;
@@ -71,6 +73,7 @@ export function Carousel<T>({
         onSnapToItem={onSnapToItem}
         onScrollStart={onScrollStart}
         onScrollEnd={onScrollEnd}
+        style={style}
       />
     </View>
   );

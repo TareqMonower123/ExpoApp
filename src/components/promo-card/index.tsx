@@ -23,7 +23,7 @@ export function PromoCard({
   className,
 }: PromoCardProps) {
   const titleLines = title.split("\n");
-
+  
   return (
     <Card padding="none" className={cn("overflow-hidden h-full", className)}>
       <View className="absolute inset-0 flex-col">
