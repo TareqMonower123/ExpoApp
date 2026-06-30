@@ -3,7 +3,7 @@ import { BookingCard } from "@/components/booking-card";
 import { PromoCard } from "@/components/promo-card";
 import { HomeLocationCard } from "@/components/home-location-card";
 import { PromoOfferCard } from "@/components/promo-offer-card";
-import { View, Text, ScrollView, FlatList, useWindowDimensions } from "react-native";
+import { View, Text, ScrollView, useWindowDimensions } from "react-native";
 import { Coffee } from "lucide-react-native";
 import { Carousel } from "@/components/carousel";
 
@@ -107,31 +107,27 @@ export default function HomeScreen() {
             <View className="w-0.75 h-4 bg-accent rounded-full" />
             <Text className="text-muted text-sm">Offers & Promotions</Text>
           </View>
-          <FlatList
+          <Carousel
             data={OFFERS}
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            snapToInterval={screenWidth - 16}
-            decelerationRate="fast"
-            contentContainerStyle={{ paddingRight: 16 }}
-            style={{ height: 200 }}
-            keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
-              <View
-                style={{
-                  width: screenWidth - 32,
-                  height: 200,
-                  marginRight: 16,
-                }}
-              >
-                <PromoOfferCard
-                  backgroundColor={item.backgroundColor}
-                  headline={item.headline}
-                  description={item.description}
-                  onPress={() => {}}
-                />
-              </View>
+              <PromoOfferCard
+                backgroundColor={item.backgroundColor}
+                headline={item.headline}
+                description={item.description}
+                onPress={() => {}}
+              />
             )}
+            itemHeight={200}
+            mode="parallax"
+            modeConfig={{
+              parallaxScrollingScale: 1.0,
+              parallaxScrollingOffset: 48,
+            }}
+            pagingEnabled={true}
+            snapEnabled={true}
+            loop
+            autoPlay
+            autoPlayInterval={3000}
           />
         </View>
       </View>

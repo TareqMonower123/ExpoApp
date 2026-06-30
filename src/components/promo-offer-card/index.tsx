@@ -24,7 +24,7 @@ export function PromoOfferCard({
   return (
     <Card
       bordered={false}
-      className={cn("overflow-hidden rounded-large", className)}
+      className={cn("overflow-hidden", className)}
       style={{ backgroundColor, height: 200 }}
     >
       <TouchableOpacity
